@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Model\ShippingInformationManagement">
+        <plugin name="save_customcheckoutfield_in_quote" type="Qualdev\Customcheckoutfield\Plugin\Checkout\Model\ShippingInformationManagement" sortOrder="1"/>
+    </type>
+	
+	<!-- <type name="Magento\Sales\Controller\Adminhtml\Order\Create">
+        <plugin name="save_customcheckoutfield_in_quote" type="Qualdev\Customcheckoutfield\Controller\Adminhtml\Order\Create\Save" sortOrder="1"/>
+    </type> -->
+</config>

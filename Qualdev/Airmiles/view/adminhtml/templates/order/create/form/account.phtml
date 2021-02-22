@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<div class="admin__page-section-title <?= /* @escapeNotVerified */ $block->getHeaderCssClass() ?>">
+    <span class="title"><?= /* @escapeNotVerified */ $block->getHeaderText() ?></span>
+    <div class="actions"></div>
+</div>
+<div id="customer_account_fieds" class="admin__page-section-content">
+    <?= $block->getForm()->getHtml() ?>
+	<div class="admin__field field field-airmiles " data-ui-id="fieldset-element-form-field-airmiles">
+		<label class="label admin__field-label" for="airmiles" data-ui-id="fieldset-element-form-field-airmiles-label"><span>Aimiles Collection NUmber</span></label>
+		<div class="admin__field-control control">
+			<input id="airmiles" name="airmiles" data-ui-id="fieldset-element-form-field-airmiles" value="" class="airmiles admin__control-text input-text admin__control-text" type="text">                            
+		</div>
+	</div>
+</div>
+
+<script>
+    require(["prototype", "Magento_Sales/order/create/form"], function(){
+        order.accountFieldsBind($('customer_account_fieds'));
+    });
+</script>

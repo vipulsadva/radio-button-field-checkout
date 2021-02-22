@@ -1,0 +1,13 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd"> 
+	<update handle="customer_account"/> 
+	<body> 	
+		<referenceBlock name="customer_account_navigation">
+			<block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-account-navigation-airmiles">
+				<arguments>
+					<argument name="path" xsi:type="string">airmiles/index/airmiles</argument>
+					<argument name="label" xsi:type="string">Airmiles Points</argument>
+				</arguments>
+			</block>
+		</referenceBlock>
+	</body> 
+</page>

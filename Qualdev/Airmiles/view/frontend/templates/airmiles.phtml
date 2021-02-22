@@ -1,0 +1,39 @@
+<?php 
+$rewardpoints = $block->getCustomer();
+// $firstname = $block->getFirstName();
+// $lastname = $block->getLastName();
+// $totalamt = $block->getTotal();
+// var_dump($totalamt);
+// var_dump($rewardpoints); exit;
+$someURL = "https://demo-soap-service.rewardbank.ca/service.php?WSDL";
+$webService = new SoapClient($someURL);
+$result; 
+try {
+	$result = $webService->__soapCall("Submit", array('parameters'=>$rewardpoints));
+	$webrequest = $webService->__getSubmitRequest();
+	$webResponse = $webService->__getSubmitResponse();
+	
+	var_dump($webService->__soapCall("Submit", array('parameters'=>$rewardpoints)));
+	
+	print_r($webrequest);
+	echo "response";
+	print_r($webResponse);
+
+
+}catch(Exception $e){
+print_r($e->getMessage());
+	
+}
+
+// print_r($result);
+// $rewardpoint = json_decode(json_encode($result), true);
+// print_r($rewardpoint);
+/* foreach($rewardpoints as $rewardpoint){
+	$points = $rewardpoint['airmiles'];
+	if($points != ''){
+		echo "<pre>";
+		print_r($rewardpoint);
+		echo "</pre>";		
+	}
+} */
+ ?>
